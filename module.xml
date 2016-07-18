@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--@PREPROC:  ./proc/pre.sh-->
+<!--@POSTPROC: ./proc/post.sh-->
+<module suppressWarnings="true">
+
+<Login f="nodata">
+  <Login>
+    <User t="list" f="user nolabel" l="Control"/>
+  </Login>
+</Login>
+
+<Control f="nodata">
+  <Control f="noscroll">
+    <autonum/>
+    <Create_New_Location t="button" l="Location"/>
+    <List_of_Locations  t="list"   ec="Location"/>
+  </Control>
+  <search/>
+</Control>
+
+<Location>
+  <Location>
+    <Owner_Last_Name f="id">
+      <str>
+        <pos>2</pos>
+        <fmt>$1-</fmt>
+      </str>
+    </Owner_Last_Name>
+    <Owner_Address f="id">
+      <str>
+        <pos>3</pos>
+        <fmt>$1</fmt>
+      </str>
+    </Owner_Address>
+    <City f="id">
+      <str>
+        <pos>1</pos>
+        <fmt>LOC-$1-</fmt>
+      </str>
+    </City>
+    <Property_Age/>
+    <Construction t="checkbox">
+      <opts>
+        <opt>Aluminium</opt>
+        <opt>Asbestos</opt>
+        <opt>Brick</opt>
+        <opt>Clad</opt>
+        <opt>Concrete</opt>
+        <opt>Double Brick</opt>
+        <opt>Fibre</opt>
+        <opt>Iron</opt>
+        <opt>Limestone</opt>
+        <opt>Metal</opt>
+        <opt>Sandstone</opt>
+        <opt>Steel</opt>
+        <opt>Stone</opt>
+        <opt>Tile</opt>
+        <opt>Timber</opt>
+        <opt>Veneer</opt>
+        <opt>Wetheared board</opt>
+        <opt>Wood</opt>
+        <opt>Other</opt>
+        <opt>No Observation</opt>
+      </opts>
+    </Construction>
+    <Painted t="radio">
+      <opts>
+        <opt>Yes</opt>
+        <opt>No</opt>
+        <opt>No Observation</opt>
+      </opts>
+    </Painted>
+    <Notes/>
+    <Latitude/>
+    <Longitude/>
+    <Create_New_Sample t="button" lc="Sample"/>
+    <Existing_Samples t="dropdown" ec="Sample"/>
+  </Location>
+</Location>
+
+<Sample>
+  <Sample>
+    <Sample_ID f="id">
+      <str>
+        <pos>1</pos>
+        <fmt>SAMPLE-$1-</fmt>
+      </str>
+    </Sample_ID>
+    <Sample_Name f="id">
+      <str>
+        <pos>1</pos>
+        <fmt>$1</fmt>
+      </str>
+    </Sample_Name>
+    <Sample_Note/>
+    <Sample_Barcode/>
+    <PXRF_Readings/>
+  </Sample>
+  <PXRF_Readings>
+    <Arsenic_mg_kg>
+      Arsenic (mg/kg)
+    </Arsenic_mg_kg>
+    <Cadmium_mg_kg>
+      Cadmium (mg/kg)
+    </Cadmium_mg_kg>
+    <Chromium_mg_kg>
+      Chromium (mg/kg)
+    </Chromium_mg_kg>
+    <Copper_mg_kg>
+      Copper (mg/kg)
+    </Copper_mg_kg>
+    <Manganese_mg_kg>
+      Manganese (mg/kg)
+    </Manganese_mg_kg>
+    <Nickel_mg_kg>
+      Nickel (mg/kg)
+    </Nickel_mg_kg>
+    <Lead_mg_kg>
+      Lead (mg/kg)
+    </Lead_mg_kg>
+    <Zinc_mg_kg>
+      Zinc (mg/kg)
+    </Zinc_mg_kg>
+    <Mercury_mg_kg>
+      Mercury (mg/kg)
+    </Mercury_mg_kg>
+  </PXRF_Readings>
+</Sample>
+
+<logic><![CDATA[
+]]></logic>
+</module>
